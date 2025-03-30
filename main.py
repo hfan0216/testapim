@@ -20,4 +20,8 @@ def data_get(product_id):
         raise Exception('URL未正常响应请求')
     return value
 
-data = data_get(product_id=1, url='http://域名+接口地址')
+#GET https://apim-northwindshoes123.azure-api.net/northwindshoes01/api/Products/1 HTTP/1.1
+
+#data = data_get(product_id=1, url='http://域名+接口地址')
+
+response = requests.get('https://apim-northwindshoes123.azure-api.net/northwindshoes01/api/Products/1')
